@@ -16,7 +16,7 @@ This directory contains a simple implementation of a Vectorized  Multiprobing Lo
 
 *** compute_recall.m - Given two nearest neighbor sets, of which one contains the true nearest neighbor ids and the other LSH's returned nearest neighbor ids, it returns the recall of the LSH search (i.e. the size of the intersection of the two sets divided by K, where K is the number of nearest neighbors computed)
 
-
+If for a query only KK < K neighbors were found (because it had only KK < K candidates), then 0 is returned as neighbor id for the K - KK entries in the id matrix.
 For more details refer to each function's source code and comments.
 
 #################### EXAMPLE ####################
